@@ -1,0 +1,39 @@
+.optionsWrapper {
+  margin: 16px 0 0;
+}
+
+.btn {
+  height: 70px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 20%);
+  border: 0;
+  border-left: 4px solid #ffffff;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.011em;
+  text-align: left;
+}
+
+.btn.active {
+  background: #fff;
+  color: #503883;
+}
+
+.btn .textIcon {
+  margin: 0 20px 0 0;
+}
+
+.btn:global(.ant-btn.ant-btn):hover,
+.btn:global(.ant-btn.ant-btn):focus {
+  color: #FFF;
+  border-left: 4px solid #fff;
+  background: rgba(255, 255, 255, 20%);
+}
+
+.btn.active:global(.ant-btn.ant-btn):hover,
+.btn.active:global(.ant-btn.ant-btn):focus {
+  background: #fff;
+  color: #503883;
+}

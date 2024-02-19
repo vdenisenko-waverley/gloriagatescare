@@ -1,0 +1,134 @@
+.cardWrapper {
+  margin-top: 16px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 4.014307498931885px 18.733434677124023px 2.6762051582336426px
+      #00000014,
+    0px 10.70482063293457px 13.381025314331055px 1.3381025791168213px #00000013;
+}
+
+.cardBehind1,
+.cardBehind2 {
+  height: 20px;
+  background: #fff;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 0px 4.014307498931885px 18.733434677124023px 2.6762051582336426px
+      #00000014,
+    0px 10.70482063293457px 13.381025314331055px 1.3381025791168213px #00000013;
+}
+
+.cardBehind1 {
+  margin: 0 20px;
+}
+
+.cardBehind2 {
+  margin: 0 40px;
+}
+
+.top {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: -0.011em;
+  text-align: left;
+  color: #503883;
+}
+
+.btn {
+  display: flex;
+  height: auto;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+
+.btn .left {
+  display: flex;
+  align-items: center;
+}
+
+.btn .right {
+  display: flex;
+  flex-direction: column;
+  font-family: Metropolis;
+}
+
+.btn .text {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 1.2999999523162842px;
+  text-align: left;
+  color: #503883;
+}
+
+.btn .textIcon {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 1.2999999523162842px;
+  text-align: left;
+  margin: 0 0 4px;
+}
+
+.btn .textIcon {
+  margin: 0 8px 0 0;
+}
+
+.btnHor .textIcon,
+.btnHor .text {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 1.2999999523162842px;
+  text-align: left;
+  margin: 0 0 4px;
+}
+
+.arrowRight {
+  transform: rotate(180deg);
+}
+
+.overlay {
+  border-radius: 16px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(231, 218, 255, 80%);
+}
+
+.btn:global(.ant-btn.ant-btn):hover,
+.btn:global(.ant-btn.ant-btn):focus,
+.btnHor:global(.ant-btn.ant-btn):hover,
+.btnHor:global(.ant-btn.ant-btn):focus {
+  color: #fff;
+  background-color: transparent;
+}

@@ -1,0 +1,88 @@
+@import url("https://fonts.cdnfonts.com/css/metropolis-2");
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+.ant-app {
+  height: 100vh;
+  background: no-repeat url("/main-bg.png");
+  background-size: cover;
+  color: #ffffff;
+  padding: 24px 0;
+  overflow: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.ant-carousel {
+  flex: 1;
+}
+
+.ant-progress {
+  padding: 0 24px;
+}
+
+.ant-progress .ant-progress-inner {
+  overflow: visible;
+}
+
+.ant-progress .ant-progress-bg {
+  box-shadow: 0px 1px 5px 0px #00000033, 0px 3px 1px 0px #0000001f,
+    0px 2px 2px 0px #00000024;
+}
+
+.ant-form-item .ant-form-item-label > label {
+  color: #fff;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 42px;
+  letter-spacing: -0.5px;
+}
+
+.ant-form-item {
+  margin: 0;
+  height: 100%;
+}
+
+.animateYes {
+  animation: yes .7s ease-out;
+}
+
+.animateNo {
+  animation: no .7s ease-out;
+}
+
+@keyframes yes {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+
+@keyframes no {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(-40deg) translateY(-80px);
+    opacity: 0;
+  }
+}

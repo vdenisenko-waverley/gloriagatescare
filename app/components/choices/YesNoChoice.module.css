@@ -1,0 +1,33 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 110px 0;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 0 20px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 31px;
+  letter-spacing: 2.5px;
+  text-align: center;
+  color: #fff;
+}
+
+.btn .textIcon {
+  margin: 0 0 4px 0;
+}
+
+.btn .text {
+}
+
+.btn:global(.ant-btn.ant-btn):hover,
+.btn:global(.ant-btn.ant-btn):focus {
+  color: #fff;
+  background-color: transparent;
+}

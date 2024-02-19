@@ -1,0 +1,40 @@
+.wrapper {
+  margin: 0 0 16px;
+  padding: 0 24px;
+  position: relative;
+}
+
+.title:global(.ant-typography) {
+  color: #fff;
+  margin: 0;
+}
+
+.current {
+  font-family: Metropolis;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 1.7999999523162842px;
+  text-align: center;
+}
+
+.total {
+  font-family: Metropolis;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 1.7999999523162842px;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.btnPrev {
+  position: absolute;
+  left: 8px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 1.2999999523162842px;
+}

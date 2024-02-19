@@ -1,0 +1,22 @@
+.wrapper {
+}
+
+.primaryText {
+  display: block;
+  margin: 30px 0 0;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 42px;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+
+.secondaryText {
+  display: block;
+  margin: 14px 0 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  opacity: 50%;
+  color: #fff;
+}

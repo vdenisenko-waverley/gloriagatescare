@@ -1,0 +1,19 @@
+.btnSubmit {
+  height: 50px;
+  border-radius: 4px;
+  border: 0;
+  margin: 34px 0 0;
+  background: #503883;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.btnSubmit:global(.ant-btn.ant-btn):hover,
+.btnSubmit:global(.ant-btn.ant-btn):focus {
+  background: #503883;
+  color: #fff;
+}

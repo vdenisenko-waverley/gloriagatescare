@@ -1,0 +1,7 @@
+.form {
+  margin: 32px 0 0;
+}
+
+.flexWrapper > div {
+  width: 100%;
+}

@@ -1,0 +1,8 @@
+.wrapper {
+  text-align: center;
+}
+
+.wrapper img.sentImg {
+  display: inline-block;
+  margin: 46px 0 0;
+}
