@@ -14,41 +14,12 @@ import ContactForm from "./components/ContactForm";
 import Image from "next/image";
 import BurgerIcon from "./icons/burger.svg";
 import SiteLogo from "./icons/site-logo.svg";
-import NegativeIcon from "./icons/negative.png";
-import ModeratelyNeutral from "./icons/moderately-neutral.png";
-import Neutral from "./icons/neutral.png";
-import ModeratelyHappy from "./icons/moderately-happy.png";
-import Happy from "./icons/happy.png";
 import Link from "next/link";
-import { Layout } from "antd";
+import { Layout, Typography } from "antd";
+import { smiles } from "./constants/smiles";
+import { services } from "./constants/services";
+import { questions } from "./constants/questions";
 const { Header, Content } = Layout;
-
-const SMILES = [
-  { text: "negative", icon: NegativeIcon, value: "negative" },
-  {
-    text: "moderately neutral",
-    icon: ModeratelyNeutral,
-    value: "moderately neutral",
-  },
-  { text: "neutral", icon: Neutral, value: "neutral" },
-  {
-    text: "moderately happy",
-    icon: ModeratelyHappy,
-    value: "moderately happy",
-  },
-  { text: "happy", icon: Happy, value: "happy" },
-];
-
-const SERVICES = [
-  {
-    text: "Insurance medicine",
-    icon: "&#128657;",
-    value: "Insurance medicine",
-  },
-  { text: "Checkups", icon: "&#129728;", value: "Checkups" },
-  { text: "Diagnosis", icon: "&#129298;", value: "Diagnosis" },
-  { text: "Wellness", icon: "👩‍", value: "Wellness" },
-];
 
 export default function Home() {
   const [init, setInit] = useState(false);
@@ -109,24 +80,6 @@ export default function Home() {
     carouselRef.current.goTo(step - 1);
   };
 
-  const getStepLabel = (index: number) => {
-    switch (index) {
-      case 0:
-        return "How are you doing today?";
-      case 1:
-        return "How happy are you with your current doctor?*";
-      case 2:
-        return "Do you take part in the Medicaid programme?*";
-      case 3:
-        return "Would you like to change your doctor?";
-      case 4:
-        return "What services are you interested in?";
-      case 5:
-        return "Contacts";
-    }
-    return "";
-  };
-
   // console.log("data", data);
 
   return (
@@ -141,8 +94,8 @@ export default function Home() {
         </Link>
         <Button
           className={styles.btnSkip}
-          onClick={() => onStepChange(1, getStepLabel(step), "")}
-          style={{ visibility: step !== totalSteps - 1 ? "visible" : "hidden" }}
+          onClick={() => onStepChange(1, questions[step], "")}
+          style={{ visibility: !isLastStep ? "visible" : "hidden" }}
         >
           Skip
         </Button>
@@ -179,44 +132,44 @@ export default function Home() {
         >
           <div>
             <SingleChoice
-              label="How are you doing today?"
-              options={SMILES}
-              activeOption={data["how_are_you"]}
+              label={questions[0]}
+              options={smiles}
+              activeOption={data[questions[0]]}
               onStepChange={onStepChange}
             />
           </div>
           <div>
             <SingleChoice
-              label="How happy are you with your current doctor?*"
-              options={SMILES}
-              activeOption={data["how_happy_with_doctor"]}
+              label={questions[1]}
+              options={smiles}
+              activeOption={data[questions[1]]}
               onStepChange={onStepChange}
             />
           </div>
           <div>
             <YesNoCardChoice
-              label="Do you take part in the Medicaid programme?*"
-              activeOption={data["medicaide_programme"]}
+              label={questions[2]}
+              activeOption={data[questions[2]]}
               onStepChange={onStepChange}
             />
           </div>
           <div>
             <YesNoChoice
-              label="Would you like to change your doctor?"
-              activeOption={data["change_doctor"]}
+              label={questions[3]}
+              activeOption={data[questions[3]]}
               onStepChange={onStepChange}
             />
           </div>
           <div>
             <MultipleChoice
-              label="What services are you interested in?"
-              options={SERVICES}
-              activeOption={data["services_interested"]}
+              label={questions[4]}
+              options={services}
+              activeOption={data[questions[4]]}
               onStepChange={onStepChange}
             />
           </div>
           <div>
-            <ContactForm label="Contacts" onStepChange={onStepChange} />
+            <ContactForm label={questions[5]} onStepChange={onStepChange} />
           </div>
           <div>
             <ThankYou />
