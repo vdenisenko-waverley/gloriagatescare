@@ -21,7 +21,7 @@ module.exports = {
       repo: "git@github.com:vdenisenko-waverley/gloriagatescare.git",
       path: "/home/ubuntu/tmp-site",
       "post-deploy":
-        "NODE_ENV=production npm install && npm run build && pm2 startOrRestart ecosystem.config.js --env production",
+        "npm install && NODE_ENV=production npm run build && pm2 startOrRestart ecosystem.config.js --env production",
     },
   },
 };
