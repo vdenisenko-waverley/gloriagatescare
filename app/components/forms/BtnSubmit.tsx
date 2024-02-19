@@ -7,7 +7,7 @@ const BtnSubmit = ({
   onClick,
   children,
 }: {
-  opacity: number;
+  opacity?: number;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   children: ReactNode;
 }) => {
