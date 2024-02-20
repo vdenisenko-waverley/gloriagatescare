@@ -10,8 +10,9 @@ export async function sendEmail({
   subject: string;
   html: string;
 }) {
+  const to = (process.env.EMAIL_RECIPIENT || "").split(",");
   const msg = {
-    to: process.env.EMAIL_RECIPIENT || "",
+    to,
     from: process.env.EMAIL_SENDER || "",
     subject,
     html,
