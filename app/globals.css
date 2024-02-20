@@ -9,6 +9,7 @@ body {
 html {
   overflow: hidden;
   background: no-repeat url("/main-bg.png");
+  background-size: cover;
 }
 
 body {
@@ -19,7 +20,6 @@ body {
 
 .ant-app {
   height: 100vh;
-  background-size: cover;
   color: #ffffff;
   padding: 24px 0;
   box-sizing: border-box;
