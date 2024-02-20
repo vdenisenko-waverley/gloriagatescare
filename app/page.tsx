@@ -41,8 +41,8 @@ export default function Home() {
       if (lastElement) {
         const rect = lastElement.getBoundingClientRect();
         const slideRect = slideEl.getBoundingClientRect();
-        if (rect.bottom < document.body.clientHeight) {
-          const h = document.body.clientHeight - slideRect.top;
+        if (rect.bottom < window.innerHeight) {
+          const h = window.innerHeight - slideRect.top;
           slideEl.style.height = `${h}px`;
         } else {
           const h =
@@ -95,7 +95,7 @@ export default function Home() {
         <Button
           className={styles.btnSkip}
           onClick={() => onStepChange(1, questions[step], "")}
-          style={{ visibility: !isLastStep ? "visible" : "hidden" }}
+          style={{ visibility: (step < totalSteps - 2) ? "visible" : "hidden" }}
         >
           Skip
         </Button>
