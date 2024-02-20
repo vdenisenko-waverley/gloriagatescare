@@ -15,7 +15,7 @@ const ContactForm = ({
   const [values, setValue] = useState<{ [key: string]: string }>({});
 
   const submitAllowed = () => {
-    return values.fname && values.lname && values.phone && values.email
+    return values.fname || values.lname || values.phone || values.email
       ? true
       : false;
   };
